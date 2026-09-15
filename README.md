@@ -150,7 +150,7 @@ curl -sS -o /dev/null -w "%{http_code}\n" http://r3r-mc.com        # expect 301 
 - [x] SEO tags present on every page (title / meta description / Open Graph)
 - [x] Analytics script present (Plausible `data-domain="r3r-mc.com"`) — activate at plausible.io
 - [x] Custom domain bound (`r3r-mc.com` → GitHub Pages, 4× A records verified)
-- [ ] **Enforce HTTPS** — tick the checkbox in GitHub Pages settings (cert already issued; http still serves 200 without redirect)
+- [x] **Enforce HTTPS** — ticked in GitHub Pages settings (verified: `http://r3r-mc.com` → 301 → `https://r3r-mc.com`)
 
 ---
 
