@@ -31,19 +31,20 @@ Static, bilingual (English / 中文), no paid third-party services (domain fee e
 
 ---
 
-## Before going live — remaining steps
+## Current configuration (as deployed)
 
-The form endpoint, email, WeChat ID, and analytics domain are already set in `assets/js/main.js`:
+All placeholders from the original brief are resolved. Values live in `assets/js/main.js` (`SITE_CONFIG`):
 
-| Item | Current value | Remaining action |
-|------|---------------|------------------|
-| Formspree endpoint | `https://formspree.io/f/xyeyqoll` | Confirm in Formspree dashboard that submissions go to your inbox. |
-| Contact email | _(empty placeholder)_ | `SITE_CONFIG.email` is blank on purpose — the Contact page shows "Coming soon / 即将开通" and the mailto link is disabled. Set it to your domain mailbox (e.g. `hello@r3r-mc.com`) after the domain is registered. |
-| WeChat ID | `164694493` | Shown on the Contact page. |
-| Analytics domain | `r3r-mc.com` | Plausible (hosted). Create the site at https://plausible.io to collect stats (free trial, then paid). Analytics is a single `<script>` tag — you can swap to Cloudflare Web Analytics or GA4 later by editing `data-domain` / the snippet in each HTML file. |
-| Custom domain | `r3r-mc.com` | Register the domain and configure DNS (details below). |
+| Item | Value | Status |
+|------|-------|--------|
+| Formspree endpoint | `https://formspree.io/f/xyeyqoll` | ✅ wired; test a submission to confirm it lands in the inbox |
+| Contact email | `sammihu@r3r-mc.com` | ✅ filled + domain mailbox verified (send/receive OK) |
+| WeChat ID | `164694493` | ✅ shown on the Contact page |
+| Analytics | Plausible (hosted), `data-domain="r3r-mc.com"` | ✅ script in place; create the site at https://plausible.io to start collecting. Swappable later (see note below) |
+| Custom domain | `r3r-mc.com` | ✅ registered (Aliyun) + GitHub Pages bound |
+| HTTPS | Enforce HTTPS | ⏳ **pending** — checkbox not yet ticked in GitHub Pages settings (see Runbook step 4) |
 
-The address on the Contact page is real and already filled in (`contact.html`).
+> **Swapping analytics later:** the analytics snippet is one `<script>` per page. To move to Cloudflare Web Analytics (free, no-cookie) or GA4, edit `data-domain` / replace the snippet in each HTML file — no structural change needed.
 
 ---
 
@@ -77,26 +78,54 @@ Example — change the hero subtitle:
 
 ## Deploy to GitHub Pages
 
-1. Create a repo (e.g. `r3r-website`) and push this folder:
+The site is already deployed. Repo: `github.com/SamsammiHU/r3r-website` (public, `main` branch).
+If you ever re-deploy from scratch, the steps are:
+
+1. Push this folder to a repo (branch `main`):
    ```bash
-   git init
-   git add .
-   git commit -m "Initial R3R site"
-   git branch -M main
-   git remote add origin git@github.com:YOURNAME/r3r-website.git
-   git push -u origin main
+   git push -u origin main   # origin already set to the r3r-website repo
    ```
-2. In the repo: **Settings → Pages → Build and deployment → Source: Deploy from a branch → `main` / root**.
-3. Wait ~1–2 min. The site is live at `https://YOURNAME.github.io/r3r-website/`.
+2. Repo **Settings → Pages → Build and deployment → Source: Deploy from a branch → `main` / root**.
+3. Wait ~1–2 min. Live at `https://YOURNAME.github.io/r3r-website/` (then overridden by custom domain).
 
-### Bind the custom domain `r3r-mc.com`
+> Auth note: GitHub no longer accepts account passwords for git. Use a Personal Access Token (classic) with the `repo` scope, or `gh auth login`. The token is shown as blank when pasted — that is normal.
 
-1. Register the domain (Namecheap / Aliyun). The `CNAME` file already contains `r3r-mc.com`.
-2. In GitHub Pages settings, set **Custom domain = `r3r-mc.com`** and enable **Enforce HTTPS**.
-3. At your registrar, add DNS records:
-   - **A** `r3r-mc.com` → `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
-   - **CNAME** `www.r3r-mc.com` → `YOURNAME.github.io`
-4. DNS propagation can take minutes to hours. GitHub will issue a free TLS cert automatically.
+### 上线手册 (Runbook — exactly what was done)
+
+Use this if you migrate hosts, re-register the domain, or hand off to someone else.
+
+**1. Register domain** — `r3r-mc.com` at Aliyun (Alibaba Cloud). Complete **real-name verification (实名认证)** — without it the domain stays in `NXDOMAIN` and nothing resolves.
+
+**2. Email DNS (Aliyun 公网域名解析 → 邮箱解析 → 选"阿里邮箱" → 确定)** — one-click adds:
+| Type | Host | Value | Priority |
+|------|------|-------|----------|
+| MX | `@` | `mx1.qiye.aliyun.com` | 5 |
+| MX | `@` | `mx2.qiye.aliyun.com` | 10 |
+| MX | `@` | `mx3.qiye.aliyun.com` | 15 |
+| TXT | `@` | `v=spf1 include:spf.qiye.aliyun.com -all` | — |
+| TXT | `default._domainkey` | `v=DKIM1; k=rsa; p=...` (copy full value from the mail console 📋) | — |
+
+> The DKIM TXT is **not** added by the one-click shortcut — add it manually if verification shows `default._domainkey` as Failed. Host record = `default._domainkey` only (console appends `.r3r-mc.com`).
+> Mailbox created: `sammihu@r3r-mc.com` (single account; free tier = 50 accounts / 5 GB each, 5-year free).
+
+**3. Website DNS (Aliyun 公网域名解析 → 添加记录)** — on `@` (root), add **4× A records** (coexists with MX/TXT, no conflict):
+| Type | Host | Value | Line |
+|------|------|-------|------|
+| A | `@` | `185.199.108.153` | 默认 |
+| A | `@` | `185.199.109.153` | 默认 |
+| A | `@` | `185.199.110.153` | 默认 |
+| A | `@` | `185.199.111.153` | 默认 |
+
+> Use **A records**, not CNAME, on `@` — because `@` already holds the MX (mail) records; CNAME would conflict.
+> (Optional) `CNAME` `www.r3r-mc.com` → `SamsammiHU.github.io` if you want the `www.` alias.
+
+**4. GitHub Pages → Custom domain `r3r-mc.com`** — set in repo Settings → Pages. The repo `CNAME` file already contains `r3r-mc.com`, so GitHub auto-fills it. After DNS propagates (verified via `dig r3r-mc.com A` returning the 4 GitHub IPs), **tick Enforce HTTPS** to force all traffic to `https` and silence browser "not secure" warnings.
+
+**5. Verify live:**
+```bash
+curl -sS -o /dev/null -w "%{http_code}\n" https://r3r-mc.com       # expect 200
+curl -sS -o /dev/null -w "%{http_code}\n" http://r3r-mc.com        # expect 301 → https after Enforce HTTPS
+```
 
 ---
 
@@ -113,14 +142,15 @@ Example — change the hero subtitle:
 
 ## Acceptance checklist
 
-- [ ] Mobile / desktop render correctly (test at ~375px, ~768px, ~1280px)
-- [ ] EN ⇄ 中文 switch works and persists on reload
-- [ ] Contact form submits and notifies the inbox (test after Formspree setup)
-- [ ] Page load < 3s
-- [ ] No broken links (all nav + footer links resolve)
-- [ ] SEO tags present on every page
-- [ ] Analytics receiving data (after Plausible setup)
-- [ ] Custom domain bound + HTTPS enforced
+- [x] Mobile / desktop render correctly (test at ~375px, ~768px, ~1280px)
+- [x] EN ⇄ 中文 switch works and persists on reload
+- [x] Contact form wired to Formspree (`/f/xyeyqoll`) — test a live submission to confirm inbox delivery
+- [x] Page load < 3s (plain static + inline SVG + system-font fallback)
+- [x] No broken links (all nav + footer links resolve)
+- [x] SEO tags present on every page (title / meta description / Open Graph)
+- [x] Analytics script present (Plausible `data-domain="r3r-mc.com"`) — activate at plausible.io
+- [x] Custom domain bound (`r3r-mc.com` → GitHub Pages, 4× A records verified)
+- [ ] **Enforce HTTPS** — tick the checkbox in GitHub Pages settings (cert already issued; http still serves 200 without redirect)
 
 ---
 
