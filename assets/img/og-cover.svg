@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="R3R Management Consulting">
+  <defs>
+    <linearGradient id="brandGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#004aad"/>
+      <stop offset="50%" stop-color="#0073ff"/>
+      <stop offset="100%" stop-color="#00c6ff"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="#ffffff"/>
+  <rect x="0" y="0" width="1200" height="10" fill="url(#brandGrad)"/>
+  <rect x="80" y="250" width="64" height="64" rx="14" fill="url(#brandGrad)"/>
+  <text x="112" y="293" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="26" font-weight="700" fill="#ffffff">R3R</text>
+  <text x="80" y="380" font-family="Inter, Helvetica, Arial, sans-serif" font-size="52" font-weight="700" fill="#16202a">Bridging China Supply</text>
+  <text x="80" y="442" font-family="Inter, Helvetica, Arial, sans-serif" font-size="52" font-weight="700" fill="#16202a">Chain &amp; Overseas Markets</text>
+  <text x="80" y="498" font-family="Inter, Helvetica, Arial, sans-serif" font-size="24" fill="#556c82">Trade facilitation · Sourcing · Energy project support</text>
+</svg>

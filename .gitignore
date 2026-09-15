@@ -1,0 +1,3 @@
+# Project-internal data, not part of the website source
+.workbuddy/
+.DS_Store

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>R3R — Page not found</title>
+    <meta name="robots" content="noindex" />
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+    <meta name="theme-color" content="#0f3559" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body data-page="404">
+    <header class="site-header">
+      <div class="container nav">
+        <a class="brand" href="index.html" aria-label="R3R home">
+          <img class="logo" src="assets/img/logo.svg" alt="R3R" />
+          <span class="brand-text">
+            <span class="brand-name">R3R</span>
+            <span class="brand-sub" data-i18n="brand.sub">Management Consulting</span>
+          </span>
+        </a>
+        <nav class="nav-menu" aria-label="Primary">
+          <ul class="nav-links" id="navLinks">
+            <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+            <li><a href="services.html" data-i18n="nav.services">Services</a></li>
+            <li><a href="about.html" data-i18n="nav.about">About</a></li>
+            <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+          </ul>
+          <div class="nav-right">
+            <button class="lang-toggle" id="langToggle" aria-label="Switch language">中文</button>
+          </div>
+        </nav>
+        <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <section class="notfound">
+      <div class="container">
+        <h1 style="font-size: 3.4rem">404</h1>
+        <h2 data-i18n="notfound.title">Page not found</h2>
+        <p class="lead" data-i18n="notfound.body"></p>
+        <p style="margin-top: 1.4em">
+          <a class="btn btn--primary" href="index.html" data-i18n="notfound.button">Back to home</a>
+        </p>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-bottom">
+          <span>© <span id="year">2026</span> <span data-i18n="footer.rights">R3R Management Consulting Limited. All rights reserved.</span></span>
+          <span>R3R Management Consulting Limited</span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="assets/js/i18n.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

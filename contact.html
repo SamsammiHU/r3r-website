@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title data-i18n="contact.meta.title">Contact — R3R Management Consulting</title>
+    <meta name="description" data-meta="contact.meta.description" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="R3R Management Consulting" />
+    <meta property="og:title" data-meta="contact.meta.title" content="" />
+    <meta property="og:description" data-meta="contact.meta.description" content="" />
+    <meta property="og:image" content="assets/img/og-cover.svg" />
+    <meta property="og:url" content="https://r3r-mc.com/contact.html" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+    <meta name="theme-color" content="#004aad" />
+    <link rel="canonical" href="https://r3r-mc.com/contact.html" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body data-page="contact">
+    <!-- ===== Header ===== -->
+    <header class="site-header">
+      <div class="container nav">
+        <a class="brand" href="index.html" aria-label="R3R home">
+          <img class="logo" src="assets/img/logo.svg" alt="R3R" />
+          <span class="brand-text">
+            <span class="brand-name">R3R</span>
+            <span class="brand-sub" data-i18n="brand.sub">Management Consulting</span>
+          </span>
+        </a>
+        <nav class="nav-menu" aria-label="Primary">
+          <ul class="nav-links" id="navLinks">
+            <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+            <li><a href="services.html" data-i18n="nav.services">Services</a></li>
+            <li><a href="about.html" data-i18n="nav.about">About</a></li>
+            <li><a href="contact.html" class="active" data-i18n="nav.contact">Contact</a></li>
+          </ul>
+          <div class="nav-right">
+            <button class="lang-toggle" id="langToggle" aria-label="Switch language">中文</button>
+          </div>
+        </nav>
+        <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- ===== Hero ===== -->
+    <section class="hero">
+      <div class="container">
+        <span class="eyebrow" data-i18n="contact.hero.eyebrow">Contact</span>
+        <h1 data-i18n="contact.hero.title">Get in touch</h1>
+        <p class="lead" data-i18n="contact.hero.lead"></p>
+      </div>
+    </section>
+
+    <!-- ===== Contact grid ===== -->
+    <section class="section">
+      <div class="container">
+        <div class="contact-grid">
+          <!-- Info -->
+          <div class="contact-info">
+            <h2 data-i18n="contact.infoTitle">Our details</h2>
+            <p>
+              <span class="label" data-i18n="contact.label.company">Company</span>
+              R3R Management Consulting Limited
+            </p>
+            <p>
+              <span class="label" data-i18n="contact.label.address">Address</span>
+              Unit D18, 3/F, Wong King Industrial Building, No.2-4 Tai Yau Street, San Po Kong, Hong Kong
+            </p>
+            <p>
+              <span class="label" data-i18n="contact.label.email">Email</span>
+              <a id="cfg-email-link" href="mailto:sammihu@r3r-mc.com"><span id="cfg-email">sammihu@r3r-mc.com</span></a>
+            </p>
+            <p>
+              <span class="label" data-i18n="contact.label.wechat">WeChat</span>
+              <span id="cfg-wechat">164694493</span>
+            </p>
+            <p class="muted" style="margin-top: 18px" data-i18n="contact.note"></p>
+          </div>
+
+          <!-- Form -->
+          <div>
+            <h2 data-i18n="contact.formTitle">Send us a message</h2>
+            <form id="contactForm" method="POST" novalidate>
+              <input type="text" name="_gotcha" style="display: none" aria-hidden="true" />
+              <div class="form-field">
+                <label for="f-name" data-i18n="contact.f.name">Name</label>
+                <input id="f-name" name="name" type="text" autocomplete="name" required />
+              </div>
+              <div class="form-field">
+                <label for="f-email" data-i18n="contact.f.email">Email</label>
+                <input id="f-email" name="email" type="email" autocomplete="email" required />
+              </div>
+              <div class="form-field">
+                <label for="f-company" data-i18n="contact.f.company">Company (optional)</label>
+                <input id="f-company" name="company" type="text" autocomplete="organization" />
+              </div>
+              <div class="form-field">
+                <label for="f-message" data-i18n="contact.f.message">Message</label>
+                <textarea id="f-message" name="message" required></textarea>
+              </div>
+              <button class="btn btn--primary" type="submit" data-i18n="contact.f.submit">Send message</button>
+              <p class="form-note" data-i18n="contact.f.note"></p>
+              <div class="form-status" id="formStatus" role="status" aria-live="polite"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Footer ===== -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <div class="brand">
+              <img class="logo" src="assets/img/logo.svg" alt="R3R" />
+              <span class="brand-text">
+                <span class="brand-name">R3R</span>
+                <span class="brand-sub" data-i18n="brand.sub">Management Consulting</span>
+              </span>
+            </div>
+            <p style="margin-top: 12px; max-width: 40ch" data-i18n="footer.tagline">Bridging China Supply Chain &amp; Overseas Markets</p>
+          </div>
+          <div>
+            <p><strong data-i18n="footer.based">Hong Kong</strong></p>
+            <p><a href="index.html" data-i18n="nav.home">Home</a></p>
+            <p><a href="services.html" data-i18n="nav.services">Services</a></p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>© <span id="year">2026</span> <span data-i18n="footer.rights">R3R Management Consulting Limited. All rights reserved.</span></span>
+          <span>R3R Management Consulting Limited</span>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ===== Scripts ===== -->
+    <script src="assets/js/i18n.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script defer data-domain="r3r-mc.com" src="https://plausible.io/js/script.js"></script>
+  </body>
+</html>
