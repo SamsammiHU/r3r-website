@@ -1,0 +1,324 @@
+{
+  "site": {
+    "name": "R3R Management Consulting Limited",
+    "shortName": "R3R",
+    "sub": "Management Consulting",
+    "domain": "https://r3r-mc.com",
+    "tagline": "Bridging China Supply Chain & Overseas Markets",
+    "address": "Unit D18, 3/F, Wong King Industrial Building, No.2-4 Tai Yau Street, San Po Kong, Hong Kong",
+    "formspreeEndpoint": "https://formspree.io/f/xyeyqoll",
+    "formRecipient": "business@r3r-mc.com",
+    "plausibleDomain": "r3r-mc.com"
+  },
+
+  "nav": [
+    { "label": "Home", "href": "/index.html" },
+    { "label": "Energy", "href": "/energy.html" },
+    { "label": "Supply Chain", "href": "/supply-chain.html" },
+    { "label": "About", "href": "/about.html" },
+    { "label": "Contact", "href": "/contact.html" }
+  ],
+
+  "cta": {
+    "title": "Tell us what you need to deliver.",
+    "label": "Discuss Your Project",
+    "href": "/contact.html"
+  },
+
+  "ui": {
+    "contact": "Contact",
+    "office": "Hong Kong",
+    "rights": "All rights reserved.",
+    "explore": "Explore"
+  },
+
+  "home": {
+    "hero": {
+      "eyebrow": "Hong Kong · Energy & Supply Chain",
+      "title": "Customized Energy Solutions. End‑to‑End Delivery.",
+      "subtitle": "We integrate top-tier Chinese manufacturing with in-house engineering support to make your overseas energy and sourcing projects happen.",
+      "bg": "/assets/img/hero_bg.jpg"
+    },
+    "sectionHead": {
+      "eyebrow": "What we do",
+      "title": "Two practices. One delivery team."
+    },
+    "cards": [
+      {
+        "title": "Energy Project Coordination",
+        "desc": "Storage, PV and EMS projects coordinated from specification to on-site delivery.",
+        "image": "/assets/img/home_card_energy.jpg",
+        "href": "/energy.html",
+        "linkLabel": "Explore"
+      },
+      {
+        "title": "Supply Chain Management",
+        "desc": "Sourcing, consolidation and global fulfillment for general merchandise.",
+        "image": "/assets/img/home_card_scm.jpg",
+        "href": "/supply-chain.html",
+        "linkLabel": "Explore"
+      }
+    ],
+    "logoLabel": "Selected partners and suppliers",
+    "stats": [
+      { "value": "125+", "label": "Integrated Suppliers" },
+      { "value": "Top-Tier", "label": "Manufacturing Ecosystem" },
+      { "value": "Global", "label": "Logistics Networks" }
+    ]
+  },
+
+  "energy": {
+    "hero": {
+      "eyebrow": "Energy Project Coordination",
+      "title": "Tailored Energy Storage & Project Execution",
+      "lead": "Backed by Tsinghua University's R&D team and affiliated engineering company (Sionix), we provide highly customized, small-batch to commercial-scale energy solutions."
+    },
+    "solutionsHead": {
+      "eyebrow": "Solutions",
+      "title": "Storage configured to the site, not the catalogue."
+    },
+    "solutions": [
+      {
+        "title": "Commercial & Industrial",
+        "desc": "Customized battery storage for factories, campuses and commercial buildings, sized to your load profile and site constraints.",
+        "image": "/assets/img/solution_ci.jpg"
+      },
+      {
+        "title": "Utility-Scale",
+        "desc": "Containerized systems for grid support, peak shaving and renewable integration.",
+        "image": "/assets/img/solution_utility.jpg"
+      },
+      {
+        "title": "Off-Grid & Remote",
+        "desc": "Reliable power for sites beyond the grid, from islands to remote industrial operations.",
+        "image": "/assets/img/solution_offgrid.jpg"
+      }
+    ],
+    "productsHead": {
+      "eyebrow": "Products",
+      "title": "A product set built around the project."
+    },
+    "products": [
+      {
+        "title": "Energy Storage Systems",
+        "desc": "Modular battery systems with integrated thermal and safety management.",
+        "image": "/assets/img/product_ess.jpg"
+      },
+      {
+        "title": "Solar PV Systems",
+        "desc": "Rooftop and ground-mount PV, engineered for local irradiance and grid codes.",
+        "image": "/assets/img/product_pv.jpg"
+      },
+      {
+        "title": "Off-Grid Power Systems",
+        "desc": "Standalone solar-storage-diesel hybrids for continuous operation.",
+        "image": "/assets/img/product_offgrid.jpg"
+      },
+      {
+        "title": "Efficient Lighting",
+        "desc": "Commercial and industrial lighting configured for low-energy operation.",
+        "image": "/assets/img/product_light.jpg"
+      }
+    ],
+    "productNote": "Integrating top-tier manufacturing partners including Xingyi, Wowtiger, and Boxin Solar.",
+    "ems": {
+      "eyebrow": "EMS",
+      "title": "One control layer across your energy assets.",
+      "intro": "Our Energy Management System connects storage, PV and site loads into a single operating view — with forecasting, control and safety built in.",
+      "image": "/assets/img/ems_dashboard.jpg",
+      "points": [
+        {
+          "title": "AI Forecasting",
+          "desc": "Load and generation forecasting to plan dispatch ahead of demand."
+        },
+        {
+          "title": "Cross-Transformer",
+          "desc": "Balance load across transformers without unnecessary curtailment."
+        },
+        {
+          "title": "Customized Control",
+          "desc": "Control strategies matched to your operating rules and tariff structure."
+        },
+        {
+          "title": "Global Safety",
+          "desc": "Monitoring and protection designed for international deployment."
+        }
+      ]
+    },
+    "cases": {
+      "eyebrow": "Global Projects",
+      "title": "Delivered across markets.",
+      "items": [
+        {
+          "title": "Japan",
+          "label": "Commercial & Industrial Storage",
+          "image": "/assets/img/case_japan.jpg"
+        },
+        {
+          "title": "Portugal",
+          "label": "Utility-Scale Storage",
+          "image": "/assets/img/case_portugal.jpg"
+        }
+      ],
+      "note": "Delivered in partnership with our authorized strategic suppliers."
+    }
+  },
+
+  "supply": {
+    "hero": {
+      "eyebrow": "Supply Chain Management",
+      "title": "Global Fulfillment & Supply Chain Management",
+      "lead": "Beyond energy, R3R brings proven supply chain execution for general merchandise, powered by a global logistics network."
+    },
+    "capabilitiesHead": {
+      "eyebrow": "Capabilities",
+      "title": "Execution you can see at every step."
+    },
+    "capabilities": [
+      {
+        "title": "Global Logistics Network",
+        "desc": "Access to a global service network across 50 countries, including CDC/RDC facilities for seamless consolidation and distribution.",
+        "image": "/assets/img/scm_network.jpg"
+      },
+      {
+        "title": "Digital Control Tower",
+        "desc": "Real-time PO/Shipment tracking and end-to-end visibility via a digital platform. Monitor every step from factory to final delivery.",
+        "image": "/assets/img/scm_digital.jpg"
+      },
+      {
+        "title": "Warehousing & Consolidation",
+        "desc": "Low MOQ friendly. Offshore warehousing, pick & pack, and store-ready delivery to maximize your supply chain efficiency.",
+        "image": "/assets/img/scm_warehouse.jpg"
+      }
+    ],
+    "servicesHead": {
+      "eyebrow": "Services",
+      "title": "Five functions, one accountable flow."
+    },
+    "services": [
+      {
+        "title": "Supplier Sourcing",
+        "desc": "Identifying and qualifying manufacturers against your specification.",
+        "icon": "/assets/img/icons.svg#icon-source"
+      },
+      {
+        "title": "Sample Coordination",
+        "desc": "Managing sampling rounds, feedback and approval.",
+        "icon": "/assets/img/icons.svg#icon-sample"
+      },
+      {
+        "title": "Production Follow-up",
+        "desc": "Tracking milestones and flagging deviations before shipment.",
+        "icon": "/assets/img/icons.svg#icon-production"
+      },
+      {
+        "title": "Consolidation",
+        "desc": "Combining multiple suppliers into one shipment.",
+        "icon": "/assets/img/icons.svg#icon-consolidation"
+      },
+      {
+        "title": "Quality Control",
+        "desc": "Inspection before dispatch, with photo and report records.",
+        "icon": "/assets/img/icons.svg#icon-quality"
+      }
+    ],
+    "case": {
+      "eyebrow": "Track Record",
+      "value": "400+ SKUs",
+      "desc": "Managed 400+ SKUs with an annual procurement volume of over 7M RMB for a leading Hong Kong retail group."
+    }
+  },
+
+  "about": {
+    "hero": {
+      "eyebrow": "About R3R",
+      "title": "A Hong Kong-based B2B solutions company.",
+      "lead": "R3R combines data-driven thinking, hands-on supply chain experience and strong engineering support."
+    },
+    "body": [
+      "R3R is a Hong Kong-based B2B integrated solutions company. We work with overseas buyers who need Chinese manufacturing executed properly — from supplier selection and sampling through production, consolidation and final delivery.",
+      "On the energy side, we coordinate customized storage, PV and EMS projects with our engineering partners. On the supply chain side, we run general merchandise programs across a global logistics network.",
+      "Our role is coordination and accountability: one point of contact, clear milestones, and delivery that can be verified."
+    ],
+    "facts": [
+      { "value": "Hong Kong", "label": "Headquarters" },
+      { "value": "2", "label": "Practices — energy & supply chain" },
+      { "value": "125+", "label": "Integrated suppliers" }
+    ]
+  },
+
+  "contact": {
+    "hero": {
+      "eyebrow": "Contact",
+      "title": "Talk to the right team.",
+      "lead": "Tell us what you are building. We will route your enquiry to the relevant team."
+    },
+    "form": {
+      "title": "Send an enquiry",
+      "name": "Name",
+      "company": "Company",
+      "email": "Email",
+      "category": "Requirement category",
+      "categoryPlaceholder": "Select a category",
+      "message": "Message",
+      "submit": "Send enquiry",
+      "note": "Submissions are sent to business@r3r-mc.com and routed to the relevant team.",
+      "success": "Thank you. Your enquiry has been sent — we will come back to you shortly.",
+      "error": "Something went wrong. Please email business@r3r-mc.com directly."
+    },
+    "categories": [
+      { "label": "Energy Project", "value": "Energy Project", "email": "energy@r3r-mc.com" },
+      { "label": "Supply Chain & Sourcing", "value": "Supply Chain & Sourcing", "email": "sourcing@r3r-mc.com" },
+      { "label": "General Business", "value": "General Business", "email": "business@r3r-mc.com" },
+      { "label": "Contracts & Billing", "value": "Contracts & Billing", "email": "contracts@r3r-mc.com" }
+    ],
+    "emails": [
+      {
+        "title": "Business & General",
+        "email": "business@r3r-mc.com",
+        "desc": "Company, partnerships and general enquiries.",
+        "icon": "/assets/img/icons.svg#icon-business"
+      },
+      {
+        "title": "Energy Projects",
+        "email": "energy@r3r-mc.com",
+        "desc": "Storage, PV and EMS projects.",
+        "icon": "/assets/img/icons.svg#icon-bolt"
+      },
+      {
+        "title": "Trade & Sourcing",
+        "email": "sourcing@r3r-mc.com",
+        "desc": "Sourcing, consolidation and fulfillment.",
+        "icon": "/assets/img/icons.svg#icon-box"
+      },
+      {
+        "title": "Contracts & Billing",
+        "email": "contracts@r3r-mc.com",
+        "desc": "Agreements, invoices and payments.",
+        "icon": "/assets/img/icons.svg#icon-doc"
+      }
+    ],
+    "addressTitle": "Hong Kong office",
+    "address": "Unit D18, 3/F, Wong King Industrial Building, No.2-4 Tai Yau Street, San Po Kong, Hong Kong"
+  },
+
+  "partnerLogos": [
+    { "src": "/assets/img/partner_logo_1.png", "alt": "Partner logo" },
+    { "src": "/assets/img/partner_logo_2.png", "alt": "Partner logo" },
+    { "src": "/assets/img/partner_logo_3.png", "alt": "Partner logo" },
+    { "src": "/assets/img/partner_logo_4.png", "alt": "Partner logo" },
+    { "src": "/assets/img/partner_logo_5.png", "alt": "Partner logo" },
+    { "src": "/assets/img/partner_logo_6.png", "alt": "Partner logo" },
+    { "src": "/assets/img/partner_logo_7.png", "alt": "Partner logo" },
+    { "src": "/assets/img/partner_logo_8.png", "alt": "Partner logo" },
+    { "src": "/assets/img/partner_logo_9.png", "alt": "Partner logo" },
+    { "src": "/assets/img/partner_logo_10.png", "alt": "Partner logo" },
+    { "src": "/assets/img/partner_logo_11.png", "alt": "Partner logo" },
+    { "src": "/assets/img/partner_logo_12.png", "alt": "Partner logo" },
+    { "src": "/assets/img/partner_logo_13.png", "alt": "Partner logo" },
+    { "src": "/assets/img/partner_logo_14.png", "alt": "Partner logo" },
+    { "src": "/assets/img/partner_logo_15.png", "alt": "Partner logo" },
+    { "src": "/assets/img/partner_logo_16.png", "alt": "Partner logo" },
+    { "src": "/assets/img/partner_logo_17.png", "alt": "Partner logo" }
+  ]
+}

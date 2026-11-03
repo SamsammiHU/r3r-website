@@ -3,149 +3,199 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title data-i18n="contact.meta.title">Contact — R3R Management Consulting</title>
-    <meta name="description" data-meta="contact.meta.description" content="" />
+    <title>Contact — R3R Management Consulting</title>
+    <meta
+      name="description"
+      content="Contact R3R for energy projects, supply chain and sourcing, general business, or contracts and billing. Direct emails for each team."
+    />
+    <link rel="canonical" href="https://r3r-mc.com/contact.html" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="R3R Management Consulting" />
-    <meta property="og:title" data-meta="contact.meta.title" content="" />
-    <meta property="og:description" data-meta="contact.meta.description" content="" />
-    <meta property="og:image" content="assets/img/og-cover.svg" />
+    <meta property="og:title" content="Contact — R3R Management Consulting" />
+    <meta
+      property="og:description"
+      content="Tell us what you are building. We will route your enquiry to the relevant team."
+    />
     <meta property="og:url" content="https://r3r-mc.com/contact.html" />
+    <meta property="og:image" content="https://r3r-mc.com/assets/img/hero_bg.jpg" />
     <meta name="twitter:card" content="summary_large_image" />
-    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
-    <meta name="theme-color" content="#004aad" />
-    <link rel="canonical" href="https://r3r-mc.com/contact.html" />
+    <meta name="theme-color" content="#0a1f38" />
+    <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
     />
-    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
   </head>
   <body data-page="contact">
-    <!-- ===== Header ===== -->
+    <a class="skip-link" href="#main">Skip to content</a>
+
     <header class="site-header">
-      <div class="container nav">
-        <a class="brand" href="index.html" aria-label="R3R home">
-          <img class="logo" src="assets/img/logo.svg" alt="R3R" />
+      <div class="container header-inner">
+        <a class="brand" href="/index.html" aria-label="R3R home">
+          <img src="/assets/img/logo.svg" alt="R3R" width="32" height="32" />
           <span class="brand-text">
-            <span class="brand-name">R3R</span>
-            <span class="brand-sub" data-i18n="brand.sub">Management Consulting</span>
+            <strong>R3R</strong>
+            <small data-bind="site.sub">Management Consulting</small>
           </span>
         </a>
-        <nav class="nav-menu" aria-label="Primary">
-          <ul class="nav-links" id="navLinks">
-            <li><a href="index.html" data-i18n="nav.home">Home</a></li>
-            <li><a href="services.html" data-i18n="nav.services">Services</a></li>
-            <li><a href="about.html" data-i18n="nav.about">About</a></li>
-            <li><a href="contact.html" class="active" data-i18n="nav.contact">Contact</a></li>
+        <nav class="nav" aria-label="Primary">
+          <ul class="nav-links" id="navLinks" data-each="nav">
+            <template>
+              <li><a data-href="href" data-bind="label"></a></li>
+            </template>
           </ul>
-          <div class="nav-right">
-            <button class="lang-toggle" id="langToggle" aria-label="Switch language">中文</button>
-          </div>
+          <a class="btn btn--sm btn--dark nav-cta" data-href="cta.href" data-bind="cta.label"></a>
         </nav>
-        <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false">
+        <button
+          class="nav-toggle"
+          id="navToggle"
+          type="button"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="navLinks"
+        >
           <span></span><span></span><span></span>
         </button>
       </div>
     </header>
 
-    <!-- ===== Hero ===== -->
-    <section class="hero">
-      <div class="container">
-        <span class="eyebrow" data-i18n="contact.hero.eyebrow">Contact</span>
-        <h1 data-i18n="contact.hero.title">Get in touch</h1>
-        <p class="lead" data-i18n="contact.hero.lead"></p>
-      </div>
-    </section>
+    <main id="main">
+      <section class="page-hero">
+        <div class="container">
+          <p class="eyebrow" data-bind="contact.hero.eyebrow"></p>
+          <h1 data-bind="contact.hero.title"></h1>
+          <p class="lead" data-bind="contact.hero.lead"></p>
+        </div>
+      </section>
 
-    <!-- ===== Contact grid ===== -->
-    <section class="section">
-      <div class="container">
-        <div class="contact-grid">
-          <!-- Info -->
-          <div class="contact-info">
-            <h2 data-i18n="contact.infoTitle">Our details</h2>
-            <p>
-              <span class="label" data-i18n="contact.label.company">Company</span>
-              R3R Management Consulting Limited
-            </p>
-            <p>
-              <span class="label" data-i18n="contact.label.address">Address</span>
-              Unit D18, 3/F, Wong King Industrial Building, No.2-4 Tai Yau Street, San Po Kong, Hong Kong
-            </p>
-            <p>
-              <span class="label" data-i18n="contact.label.email">Email</span>
-              <a id="cfg-email-link" href="mailto:sammihu@r3r-mc.com"><span id="cfg-email">sammihu@r3r-mc.com</span></a>
-            </p>
-            <p>
-              <span class="label" data-i18n="contact.label.wechat">WeChat</span>
-              <span id="cfg-wechat">164694493</span>
-            </p>
-            <p class="muted" style="margin-top: 18px" data-i18n="contact.note"></p>
-          </div>
-
-          <!-- Form -->
+      <section class="section">
+        <div class="container contact-grid">
           <div>
-            <h2 data-i18n="contact.formTitle">Send us a message</h2>
-            <form id="contactForm" method="POST" novalidate>
-              <input type="text" name="_gotcha" style="display: none" aria-hidden="true" />
+            <h2 class="section-form-title" data-bind="contact.form.title"></h2>
+            <form
+              id="contactForm"
+              method="POST"
+              action="https://formspree.io/f/xyeyqoll"
+              novalidate
+            >
+              <input type="hidden" name="_subject" value="New enquiry — R3R website" />
+              <input type="hidden" name="department" id="f-department" value="" />
+              <input
+                class="hp"
+                type="text"
+                name="_gotcha"
+                tabindex="-1"
+                autocomplete="off"
+                aria-hidden="true"
+              />
+
               <div class="form-field">
-                <label for="f-name" data-i18n="contact.f.name">Name</label>
+                <label for="f-name" data-bind="contact.form.name"></label>
                 <input id="f-name" name="name" type="text" autocomplete="name" required />
               </div>
+
               <div class="form-field">
-                <label for="f-email" data-i18n="contact.f.email">Email</label>
+                <label for="f-company" data-bind="contact.form.company"></label>
+                <input
+                  id="f-company"
+                  name="company"
+                  type="text"
+                  autocomplete="organization"
+                />
+              </div>
+
+              <div class="form-field">
+                <label for="f-email" data-bind="contact.form.email"></label>
                 <input id="f-email" name="email" type="email" autocomplete="email" required />
               </div>
+
               <div class="form-field">
-                <label for="f-company" data-i18n="contact.f.company">Company (optional)</label>
-                <input id="f-company" name="company" type="text" autocomplete="organization" />
+                <label for="f-category" data-bind="contact.form.category"></label>
+                <select id="f-category" name="category" required data-each="contact.categories">
+                  <option value="" disabled selected data-bind="contact.form.categoryPlaceholder"></option>
+                  <template>
+                    <option data-value="value" data-bind="label"></option>
+                  </template>
+                </select>
               </div>
+
               <div class="form-field">
-                <label for="f-message" data-i18n="contact.f.message">Message</label>
+                <label for="f-message" data-bind="contact.form.message"></label>
                 <textarea id="f-message" name="message" required></textarea>
               </div>
-              <button class="btn btn--primary" type="submit" data-i18n="contact.f.submit">Send message</button>
-              <p class="form-note" data-i18n="contact.f.note"></p>
+
+              <button class="btn btn--dark" type="submit" data-bind="contact.form.submit"></button>
+              <p class="form-note" data-bind="contact.form.note"></p>
               <div class="form-status" id="formStatus" role="status" aria-live="polite"></div>
             </form>
           </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- ===== Footer ===== -->
+          <div class="email-matrix" data-each="contact.emails">
+            <template>
+              <a class="email-card" data-mailto="email">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <use data-use="icon"></use>
+                </svg>
+                <h3 data-bind="title"></h3>
+                <span class="addr" data-bind="email"></span>
+                <p data-bind="desc"></p>
+              </a>
+            </template>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="address-block">
+            <h3 data-bind="contact.addressTitle"></h3>
+            <p data-bind="contact.address"></p>
+          </div>
+        </div>
+      </section>
+    </main>
+
     <footer class="site-footer">
       <div class="container">
-        <div class="footer-grid">
-          <div>
-            <div class="brand">
-              <img class="logo" src="assets/img/logo.svg" alt="R3R" />
+        <div class="footer-top">
+          <div class="footer-brand">
+            <a class="brand" href="/index.html" aria-label="R3R home">
+              <img src="/assets/img/logo.svg" alt="R3R" width="32" height="32" />
               <span class="brand-text">
-                <span class="brand-name">R3R</span>
-                <span class="brand-sub" data-i18n="brand.sub">Management Consulting</span>
+                <strong>R3R</strong>
+                <small data-bind="site.sub">Management Consulting</small>
               </span>
-            </div>
-            <p style="margin-top: 12px; max-width: 40ch" data-i18n="footer.tagline">Bridging China Supply Chain &amp; Overseas Markets</p>
+            </a>
+            <p data-bind="site.tagline"></p>
           </div>
-          <div>
-            <p><strong data-i18n="footer.based">Hong Kong</strong></p>
-            <p><a href="index.html" data-i18n="nav.home">Home</a></p>
-            <p><a href="services.html" data-i18n="nav.services">Services</a></p>
+          <div class="footer-emails">
+            <p class="footer-label" data-bind="ui.contact">Contact</p>
+            <ul data-each="contact.emails">
+              <template>
+                <li>
+                  <a data-mailto="email" data-bind="email"></a>
+                  <span data-bind="title"></span>
+                </li>
+              </template>
+            </ul>
+          </div>
+          <div class="footer-address">
+            <p class="footer-label" data-bind="ui.office">Hong Kong</p>
+            <p data-bind="site.address"></p>
           </div>
         </div>
         <div class="footer-bottom">
-          <span>© <span id="year">2026</span> <span data-i18n="footer.rights">R3R Management Consulting Limited. All rights reserved.</span></span>
-          <span>R3R Management Consulting Limited</span>
+          <span
+            >© <span id="year">2026</span> <span data-bind="site.name"></span>
+            <span data-bind="ui.rights"></span
+          ></span>
+          <span>Hong Kong</span>
         </div>
       </div>
     </footer>
 
-    <!-- ===== Scripts ===== -->
-    <script src="assets/js/i18n.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script src="/assets/js/main.js" defer></script>
     <script defer data-domain="r3r-mc.com" src="https://plausible.io/js/script.js"></script>
   </body>
 </html>

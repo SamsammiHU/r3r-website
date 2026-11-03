@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Global Fulfillment & Supply Chain Management — R3R</title>
+    <meta
+      name="description"
+      content="R3R delivers global fulfillment and supply chain execution for general merchandise: sourcing, consolidation, warehousing and end-to-end shipment visibility."
+    />
+    <link rel="canonical" href="https://r3r-mc.com/supply-chain.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="R3R Management Consulting" />
+    <meta property="og:title" content="Global Fulfillment & Supply Chain Management — R3R" />
+    <meta
+      property="og:description"
+      content="Proven supply chain execution for general merchandise, powered by a global logistics network."
+    />
+    <meta property="og:url" content="https://r3r-mc.com/supply-chain.html" />
+    <meta property="og:image" content="https://r3r-mc.com/assets/img/scm_network.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="theme-color" content="#0a1f38" />
+    <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+  </head>
+  <body data-page="supply">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="/index.html" aria-label="R3R home">
+          <img src="/assets/img/logo.svg" alt="R3R" width="32" height="32" />
+          <span class="brand-text">
+            <strong>R3R</strong>
+            <small data-bind="site.sub">Management Consulting</small>
+          </span>
+        </a>
+        <nav class="nav" aria-label="Primary">
+          <ul class="nav-links" id="navLinks" data-each="nav">
+            <template>
+              <li><a data-href="href" data-bind="label"></a></li>
+            </template>
+          </ul>
+          <a class="btn btn--sm btn--dark nav-cta" data-href="cta.href" data-bind="cta.label"></a>
+        </nav>
+        <button
+          class="nav-toggle"
+          id="navToggle"
+          type="button"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="navLinks"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="page-hero">
+        <div class="container">
+          <p class="eyebrow" data-bind="supply.hero.eyebrow"></p>
+          <h1 data-bind="supply.hero.title"></h1>
+          <p class="lead" data-bind="supply.hero.lead"></p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-head">
+            <p class="eyebrow" data-bind="supply.capabilitiesHead.eyebrow"></p>
+            <h2 data-bind="supply.capabilitiesHead.title"></h2>
+          </div>
+          <div data-each="supply.capabilities">
+            <template>
+              <article class="capability">
+                <div class="capability-media">
+                  <div class="media">
+                    <img data-img="image" data-alt="title" alt="" loading="lazy" />
+                  </div>
+                </div>
+                <div class="capability-body">
+                  <h2 data-bind="title"></h2>
+                  <p data-bind="desc"></p>
+                </div>
+              </article>
+            </template>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--surface">
+        <div class="container">
+          <div class="section-head">
+            <p class="eyebrow" data-bind="supply.servicesHead.eyebrow"></p>
+            <h2 data-bind="supply.servicesHead.title"></h2>
+          </div>
+          <div class="services" data-each="supply.services">
+            <template>
+              <div class="service">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <use data-use="icon"></use>
+                </svg>
+                <h3 data-bind="title"></h3>
+                <p data-bind="desc"></p>
+              </div>
+            </template>
+          </div>
+        </div>
+      </section>
+
+      <section class="highlight">
+        <div class="container">
+          <p class="eyebrow" data-bind="supply.case.eyebrow"></p>
+          <p class="highlight-value" data-bind="supply.case.value"></p>
+          <p data-bind="supply.case.desc"></p>
+        </div>
+      </section>
+
+      <section class="cta-band">
+        <div class="container">
+          <h2 data-bind="cta.title"></h2>
+          <a class="btn btn--dark" data-href="cta.href" data-bind="cta.label"></a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <a class="brand" href="/index.html" aria-label="R3R home">
+              <img src="/assets/img/logo.svg" alt="R3R" width="32" height="32" />
+              <span class="brand-text">
+                <strong>R3R</strong>
+                <small data-bind="site.sub">Management Consulting</small>
+              </span>
+            </a>
+            <p data-bind="site.tagline"></p>
+          </div>
+          <div class="footer-emails">
+            <p class="footer-label" data-bind="ui.contact">Contact</p>
+            <ul data-each="contact.emails">
+              <template>
+                <li>
+                  <a data-mailto="email" data-bind="email"></a>
+                  <span data-bind="title"></span>
+                </li>
+              </template>
+            </ul>
+          </div>
+          <div class="footer-address">
+            <p class="footer-label" data-bind="ui.office">Hong Kong</p>
+            <p data-bind="site.address"></p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span
+            >© <span id="year">2026</span> <span data-bind="site.name"></span>
+            <span data-bind="ui.rights"></span
+          ></span>
+          <span>Hong Kong</span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/assets/js/main.js" defer></script>
+    <script defer data-domain="r3r-mc.com" src="https://plausible.io/js/script.js"></script>
+  </body>
+</html>

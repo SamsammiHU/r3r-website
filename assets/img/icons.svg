@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+  <symbol id="icon-source" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="10.5" cy="10.5" r="6.5"/>
+    <path d="M15.5 15.5 21 21"/>
+    <path d="M8 10.5h5M10.5 8v5"/>
+  </symbol>
+  <symbol id="icon-sample" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="5" y="4" width="14" height="17" rx="2"/>
+    <path d="M9 4V2h6v2"/>
+    <path d="M8.5 12l2.5 2.5L16 9"/>
+  </symbol>
+  <symbol id="icon-production" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M3 21V8l6 4V8l6 4V4h6v17z"/>
+    <path d="M7 21v-4M12 21v-4M17 21v-4"/>
+  </symbol>
+  <symbol id="icon-consolidation" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M3 8l9-5 9 5v8l-9 5-9-5z"/>
+    <path d="M3 8l9 5 9-5M12 13v8"/>
+  </symbol>
+  <symbol id="icon-quality" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/>
+    <path d="M8.5 12l2.5 2.5L16 9.5"/>
+  </symbol>
+  <symbol id="icon-business" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="4" y="3" width="16" height="18" rx="1"/>
+    <path d="M8 7h2M14 7h2M8 11h2M14 11h2M8 15h2M14 15h2M10 21v-3h4v3"/>
+  </symbol>
+  <symbol id="icon-bolt" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M13 2L4 14h6l-1 8 9-12h-6z"/>
+  </symbol>
+  <symbol id="icon-box" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="3" y="7" width="18" height="13" rx="1"/>
+    <path d="M3 11h18M8 7V4h8v3"/>
+  </symbol>
+  <symbol id="icon-doc" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M6 3h8l4 4v14H6z"/>
+    <path d="M14 3v5h4M9 12h6M9 16h6"/>
+  </symbol>
+</svg>

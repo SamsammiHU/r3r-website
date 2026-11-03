@@ -3,133 +3,143 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title data-i18n="about.meta.title">About — R3R Management Consulting</title>
-    <meta name="description" data-meta="about.meta.description" content="" />
+    <title>About — R3R Management Consulting</title>
+    <meta
+      name="description"
+      content="R3R is a Hong Kong-based B2B integrated solutions company combining data-driven thinking, supply chain experience and engineering support."
+    />
+    <link rel="canonical" href="https://r3r-mc.com/about.html" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="R3R Management Consulting" />
-    <meta property="og:title" data-meta="about.meta.title" content="" />
-    <meta property="og:description" data-meta="about.meta.description" content="" />
-    <meta property="og:image" content="assets/img/og-cover.svg" />
+    <meta property="og:title" content="About — R3R Management Consulting" />
+    <meta
+      property="og:description"
+      content="A Hong Kong-based B2B solutions company combining data-driven thinking, supply chain experience and engineering support."
+    />
     <meta property="og:url" content="https://r3r-mc.com/about.html" />
+    <meta property="og:image" content="https://r3r-mc.com/assets/img/hero_bg.jpg" />
     <meta name="twitter:card" content="summary_large_image" />
-    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
-    <meta name="theme-color" content="#004aad" />
-    <link rel="canonical" href="https://r3r-mc.com/about.html" />
+    <meta name="theme-color" content="#0a1f38" />
+    <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
     />
-    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
   </head>
   <body data-page="about">
-    <!-- ===== Header ===== -->
+    <a class="skip-link" href="#main">Skip to content</a>
+
     <header class="site-header">
-      <div class="container nav">
-        <a class="brand" href="index.html" aria-label="R3R home">
-          <img class="logo" src="assets/img/logo.svg" alt="R3R" />
+      <div class="container header-inner">
+        <a class="brand" href="/index.html" aria-label="R3R home">
+          <img src="/assets/img/logo.svg" alt="R3R" width="32" height="32" />
           <span class="brand-text">
-            <span class="brand-name">R3R</span>
-            <span class="brand-sub" data-i18n="brand.sub">Management Consulting</span>
+            <strong>R3R</strong>
+            <small data-bind="site.sub">Management Consulting</small>
           </span>
         </a>
-        <nav class="nav-menu" aria-label="Primary">
-          <ul class="nav-links" id="navLinks">
-            <li><a href="index.html" data-i18n="nav.home">Home</a></li>
-            <li><a href="services.html" data-i18n="nav.services">Services</a></li>
-            <li><a href="about.html" class="active" data-i18n="nav.about">About</a></li>
-            <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+        <nav class="nav" aria-label="Primary">
+          <ul class="nav-links" id="navLinks" data-each="nav">
+            <template>
+              <li><a data-href="href" data-bind="label"></a></li>
+            </template>
           </ul>
-          <div class="nav-right">
-            <button class="lang-toggle" id="langToggle" aria-label="Switch language">中文</button>
-          </div>
+          <a class="btn btn--sm btn--dark nav-cta" data-href="cta.href" data-bind="cta.label"></a>
         </nav>
-        <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false">
+        <button
+          class="nav-toggle"
+          id="navToggle"
+          type="button"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="navLinks"
+        >
           <span></span><span></span><span></span>
         </button>
       </div>
     </header>
 
-    <!-- ===== Hero ===== -->
-    <section class="hero">
-      <div class="container">
-        <span class="eyebrow" data-i18n="about.hero.eyebrow">About</span>
-        <h1 data-i18n="about.hero.title">About R3R</h1>
-        <p class="lead" data-i18n="about.lead"></p>
-      </div>
-    </section>
+    <main id="main">
+      <section class="page-hero">
+        <div class="container">
+          <p class="eyebrow" data-bind="about.hero.eyebrow"></p>
+          <h1 data-bind="about.hero.title"></h1>
+          <p class="lead" data-bind="about.hero.lead"></p>
+        </div>
+      </section>
 
-    <!-- ===== Body copy ===== -->
-    <section class="section">
-      <div class="container" style="max-width: 760px">
-        <p data-i18n="about.p1"></p>
-        <p data-i18n="about.p2"></p>
-        <p data-i18n="about.p3"></p>
-      </div>
-    </section>
-
-    <!-- ===== Stats ===== -->
-    <section class="section section--surface">
-      <div class="container">
-        <span class="eyebrow" data-i18n="about.stats.eyebrow">At a glance</span>
-        <div class="grid grid-3" style="margin-top: 22px">
-          <div class="card" style="text-align: center">
-            <div style="font-size: 2.2rem; font-weight: 700; color: var(--color-accent)" data-i18n="about.stats.s1.num">400+</div>
-            <div class="muted" data-i18n="about.stats.s1.label">SKUs managed</div>
-          </div>
-          <div class="card" style="text-align: center">
-            <div style="font-size: 2.2rem; font-weight: 700; color: var(--color-accent)" data-i18n="about.stats.s2.num">≈7M RMB</div>
-            <div class="muted" data-i18n="about.stats.s2.label">Annual procurement managed</div>
-          </div>
-          <div class="card" style="text-align: center">
-            <div style="font-size: 2.2rem; font-weight: 700; color: var(--color-accent)" data-i18n="about.stats.s3.num">HK</div>
-            <div class="muted" data-i18n="about.stats.s3.label">Hong Kong-based</div>
+      <section class="section">
+        <div class="container">
+          <div class="prose">
+            <p data-bind="about.body.0"></p>
+            <p data-bind="about.body.1"></p>
+            <p data-bind="about.body.2"></p>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- ===== CTA ===== -->
-    <section class="section">
-      <div class="container">
-        <div class="cta-band">
-          <h2 data-i18n="home.cta.title">Looking for a reliable sourcing or project coordination partner in China?</h2>
-          <a class="btn btn--ghost" href="contact.html" style="background:#fff;color:var(--color-accent);border-color:#fff" data-i18n="home.cta.button">Let’s talk</a>
+      <section class="stats-band" aria-label="Company facts">
+        <div class="container stats" data-each="about.facts">
+          <template>
+            <div class="stat">
+              <span class="stat-value" data-bind="value"></span>
+              <span class="stat-label" data-bind="label"></span>
+            </div>
+          </template>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- ===== Footer ===== -->
+      <section class="cta-band">
+        <div class="container">
+          <h2 data-bind="cta.title"></h2>
+          <a class="btn btn--dark" data-href="cta.href" data-bind="cta.label"></a>
+        </div>
+      </section>
+    </main>
+
     <footer class="site-footer">
       <div class="container">
-        <div class="footer-grid">
-          <div>
-            <div class="brand">
-              <img class="logo" src="assets/img/logo.svg" alt="R3R" />
+        <div class="footer-top">
+          <div class="footer-brand">
+            <a class="brand" href="/index.html" aria-label="R3R home">
+              <img src="/assets/img/logo.svg" alt="R3R" width="32" height="32" />
               <span class="brand-text">
-                <span class="brand-name">R3R</span>
-                <span class="brand-sub" data-i18n="brand.sub">Management Consulting</span>
+                <strong>R3R</strong>
+                <small data-bind="site.sub">Management Consulting</small>
               </span>
-            </div>
-            <p style="margin-top: 12px; max-width: 40ch" data-i18n="footer.tagline">Bridging China Supply Chain &amp; Overseas Markets</p>
+            </a>
+            <p data-bind="site.tagline"></p>
           </div>
-          <div>
-            <p><strong data-i18n="footer.based">Hong Kong</strong></p>
-            <p><a href="contact.html" data-i18n="nav.contact">Contact</a></p>
-            <p><a href="services.html" data-i18n="nav.services">Services</a></p>
+          <div class="footer-emails">
+            <p class="footer-label" data-bind="ui.contact">Contact</p>
+            <ul data-each="contact.emails">
+              <template>
+                <li>
+                  <a data-mailto="email" data-bind="email"></a>
+                  <span data-bind="title"></span>
+                </li>
+              </template>
+            </ul>
+          </div>
+          <div class="footer-address">
+            <p class="footer-label" data-bind="ui.office">Hong Kong</p>
+            <p data-bind="site.address"></p>
           </div>
         </div>
         <div class="footer-bottom">
-          <span>© <span id="year">2026</span> <span data-i18n="footer.rights">R3R Management Consulting Limited. All rights reserved.</span></span>
-          <span>R3R Management Consulting Limited</span>
+          <span
+            >© <span id="year">2026</span> <span data-bind="site.name"></span>
+            <span data-bind="ui.rights"></span
+          ></span>
+          <span>Hong Kong</span>
         </div>
       </div>
     </footer>
 
-    <!-- ===== Scripts ===== -->
-    <script src="assets/js/i18n.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script src="/assets/js/main.js" defer></script>
     <script defer data-domain="r3r-mc.com" src="https://plausible.io/js/script.js"></script>
   </body>
 </html>

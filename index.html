@@ -3,158 +3,175 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title data-i18n="home.meta.title">R3R Management Consulting</title>
-    <meta name="description" data-meta="home.meta.description" content="" />
+    <title>R3R Management Consulting — Energy Solutions & Global Supply Chain</title>
+    <meta
+      name="description"
+      content="R3R integrates top-tier Chinese manufacturing with in-house engineering support to deliver customized energy solutions and global supply chain management for overseas buyers."
+    />
+    <link rel="canonical" href="https://r3r-mc.com/" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="R3R Management Consulting" />
-    <meta property="og:title" data-meta="home.meta.title" content="" />
-    <meta property="og:description" data-meta="home.meta.description" content="" />
-    <meta property="og:image" content="assets/img/og-cover.svg" />
+    <meta property="og:title" content="R3R Management Consulting — Energy Solutions & Global Supply Chain" />
+    <meta
+      property="og:description"
+      content="Customized energy solutions and end-to-end supply chain delivery, backed by Chinese manufacturing and in-house engineering support."
+    />
     <meta property="og:url" content="https://r3r-mc.com/" />
+    <meta property="og:image" content="https://r3r-mc.com/assets/img/hero_bg.jpg" />
     <meta name="twitter:card" content="summary_large_image" />
-    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
-    <meta name="theme-color" content="#004aad" />
-    <link rel="canonical" href="https://r3r-mc.com/" />
+    <meta name="theme-color" content="#0a1f38" />
+    <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
     />
-    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
   </head>
   <body data-page="home">
-    <!-- ===== Header ===== -->
+    <a class="skip-link" href="#main">Skip to content</a>
+
     <header class="site-header">
-      <div class="container nav">
-        <a class="brand" href="index.html" aria-label="R3R home">
-          <img class="logo" src="assets/img/logo.svg" alt="R3R" />
+      <div class="container header-inner">
+        <a class="brand" href="/index.html" aria-label="R3R home">
+          <img src="/assets/img/logo.svg" alt="R3R" width="32" height="32" />
           <span class="brand-text">
-            <span class="brand-name">R3R</span>
-            <span class="brand-sub" data-i18n="brand.sub">Management Consulting</span>
+            <strong>R3R</strong>
+            <small data-bind="site.sub">Management Consulting</small>
           </span>
         </a>
-        <nav class="nav-menu" aria-label="Primary">
-          <ul class="nav-links" id="navLinks">
-            <li><a href="index.html" class="active" data-i18n="nav.home">Home</a></li>
-            <li><a href="services.html" data-i18n="nav.services">Services</a></li>
-            <li><a href="about.html" data-i18n="nav.about">About</a></li>
-            <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+        <nav class="nav" aria-label="Primary">
+          <ul class="nav-links" id="navLinks" data-each="nav">
+            <template>
+              <li><a data-href="href" data-bind="label"></a></li>
+            </template>
           </ul>
-          <div class="nav-right">
-            <button class="lang-toggle" id="langToggle" aria-label="Switch language">中文</button>
-          </div>
+          <a class="btn btn--sm btn--dark nav-cta" data-href="cta.href" data-bind="cta.label"></a>
         </nav>
-        <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false">
+        <button
+          class="nav-toggle"
+          id="navToggle"
+          type="button"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="navLinks"
+        >
           <span></span><span></span><span></span>
         </button>
       </div>
     </header>
 
-    <!-- ===== Hero ===== -->
-    <section class="hero">
-      <div class="container">
-        <h1 data-i18n="home.hero.title">Bridging China Supply Chain &amp; Overseas Markets</h1>
-        <p class="lead" data-i18n="home.hero.subtitle"></p>
-        <p style="margin-top: 1.6em">
-          <a class="btn btn--primary" href="contact.html" data-i18n="home.hero.cta">Contact us</a>
-        </p>
-      </div>
-    </section>
-
-    <!-- ===== Services overview ===== -->
-    <section class="section">
-      <div class="container">
-        <span class="eyebrow" data-i18n="home.services.eyebrow">What we do</span>
-        <h2 data-i18n="home.services.title">How we help</h2>
-        <div class="grid grid-3" style="margin-top: 28px">
-          <article class="card">
-            <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M9 12a3 3 0 0 1 0-4l3-3a3 3 0 0 1 4 4l-2 2" />
-              <path d="M15 12a3 3 0 0 1 0 4l-3 3a3 3 0 0 1-4-4l2-2" />
-            </svg>
-            <h3 data-i18n="home.card1.title">Trade &amp; Sourcing Coordination</h3>
-            <p data-i18n="home.card1.body"></p>
-          </article>
-          <article class="card">
-            <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M12 3l7 3v5c0 4-3 7-7 9-4-2-7-5-7-9V6z" />
-              <path d="M9 12l2 2 4-4" />
-            </svg>
-            <h3 data-i18n="home.card2.title">Supply Chain &amp; Quality Management</h3>
-            <p data-i18n="home.card2.body"></p>
-          </article>
-          <article class="card">
-            <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <circle cx="12" cy="12" r="4" />
-              <path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.5 1.5M17.5 17.5L19 19M19 5l-1.5 1.5M6.5 17.5L5 19" />
-              <path d="M11 9l-2 4h3l-2 4" />
-            </svg>
-            <h3 data-i18n="home.card3.title">Energy Project Support</h3>
-            <p data-i18n="home.card3.body"></p>
-          </article>
+    <main id="main">
+      <section class="hero hero--home">
+        <img class="hero-bg" data-img="home.hero.bg" alt="" aria-hidden="true" fetchpriority="high" />
+        <div class="hero-overlay"></div>
+        <div class="container hero-inner">
+          <p class="eyebrow eyebrow--light" data-bind="home.hero.eyebrow"></p>
+          <h1 data-bind="home.hero.title"></h1>
+          <p class="hero-sub" data-bind="home.hero.subtitle"></p>
+          <a class="btn btn--light" data-href="cta.href" data-bind="cta.label"></a>
         </div>
-        <p style="margin-top: 28px">
-          <a class="btn btn--ghost" href="services.html" data-i18n="nav.services">Services</a>
-        </p>
-      </div>
-    </section>
+      </section>
 
-    <!-- ===== Why R3R ===== -->
-    <section class="section section--surface">
-      <div class="container">
-        <span class="eyebrow" data-i18n="home.why.eyebrow">Why R3R</span>
-        <h2 data-i18n="home.why.title">Why R3R</h2>
-        <ul class="checklist" style="margin-top: 22px; max-width: 760px">
-          <li data-i18n="home.why.i1"></li>
-          <li data-i18n="home.why.i2"></li>
-          <li data-i18n="home.why.i3"></li>
-          <li data-i18n="home.why.i4"></li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- ===== CTA band ===== -->
-    <section class="section">
-      <div class="container">
-        <div class="cta-band">
-          <h2 data-i18n="home.cta.title">Looking for a reliable sourcing or project coordination partner in China?</h2>
-          <a class="btn btn--ghost" href="contact.html" style="background:#fff;color:var(--color-accent);border-color:#fff" data-i18n="home.cta.button">Let’s talk</a>
+      <section class="section">
+        <div class="container">
+          <div class="section-head">
+            <p class="eyebrow" data-bind="home.sectionHead.eyebrow"></p>
+            <h2 data-bind="home.sectionHead.title"></h2>
+          </div>
+          <div class="card-grid card-grid--2" data-each="home.cards">
+            <template>
+              <a class="card" data-href="href">
+                <div class="media">
+                  <img data-img="image" data-alt="title" alt="" loading="lazy" />
+                </div>
+                <div class="card-body">
+                  <h3 data-bind="title"></h3>
+                  <p data-bind="desc"></p>
+                  <span class="text-link"
+                    ><span data-bind="linkLabel"></span>
+                    <span aria-hidden="true">→</span></span
+                  >
+                </div>
+              </a>
+            </template>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- ===== Footer ===== -->
+      <section class="stats-band" aria-label="Key figures">
+        <div class="container stats" data-each="home.stats">
+          <template>
+            <div class="stat">
+              <span class="stat-value" data-bind="value"></span>
+              <span class="stat-label" data-bind="label"></span>
+            </div>
+          </template>
+        </div>
+      </section>
+
+      <section class="logo-wall" aria-label="Partners and suppliers">
+        <div class="container">
+          <p class="logo-wall-label" data-bind="home.logoLabel"></p>
+          <div class="logo-grid" data-each="partnerLogos">
+            <template>
+              <img data-img="src" data-alt="alt" alt="" loading="lazy" width="360" height="180" />
+            </template>
+          </div>
+        </div>
+      </section>
+    </main>
+
     <footer class="site-footer">
       <div class="container">
-        <div class="footer-grid">
-          <div>
-            <div class="brand">
-              <img class="logo" src="assets/img/logo.svg" alt="R3R" />
+        <div class="footer-top">
+          <div class="footer-brand">
+            <a class="brand" href="/index.html" aria-label="R3R home">
+              <img src="/assets/img/logo.svg" alt="R3R" width="32" height="32" />
               <span class="brand-text">
-                <span class="brand-name">R3R</span>
-                <span class="brand-sub" data-i18n="brand.sub">Management Consulting</span>
+                <strong>R3R</strong>
+                <small data-bind="site.sub">Management Consulting</small>
               </span>
-            </div>
-            <p style="margin-top: 12px; max-width: 40ch" data-i18n="footer.tagline">Bridging China Supply Chain &amp; Overseas Markets</p>
+            </a>
+            <p data-bind="site.tagline"></p>
           </div>
-          <div>
-            <p><strong data-i18n="footer.based">Hong Kong</strong></p>
-            <p><a href="contact.html" data-i18n="nav.contact">Contact</a></p>
-            <p><a href="services.html" data-i18n="nav.services">Services</a></p>
+          <div class="footer-emails">
+            <p class="footer-label" data-bind="ui.contact">Contact</p>
+            <ul data-each="contact.emails">
+              <template>
+                <li>
+                  <a data-mailto="email" data-bind="email"></a>
+                  <span data-bind="title"></span>
+                </li>
+              </template>
+            </ul>
+          </div>
+          <div class="footer-address">
+            <p class="footer-label" data-bind="ui.office">Hong Kong</p>
+            <p data-bind="site.address"></p>
           </div>
         </div>
         <div class="footer-bottom">
-          <span>© <span id="year">2026</span> <span data-i18n="footer.rights">R3R Management Consulting Limited. All rights reserved.</span></span>
-          <span>R3R Management Consulting Limited</span>
+          <span
+            >© <span id="year">2026</span> <span data-bind="site.name"></span>
+            <span data-bind="ui.rights"></span
+          ></span>
+          <span>Hong Kong</span>
         </div>
       </div>
     </footer>
 
-    <!-- ===== Scripts ===== -->
-    <script src="assets/js/i18n.js"></script>
-    <script src="assets/js/main.js"></script>
-    <!-- Plausible analytics (free). Replace data-domain if your domain differs. -->
+    <noscript>
+      <div class="container section">
+        <p>
+          R3R Management Consulting — customized energy solutions and global supply chain
+          management. Email <a href="mailto:business@r3r-mc.com">business@r3r-mc.com</a>.
+        </p>
+      </div>
+    </noscript>
+
+    <script src="/assets/js/main.js" defer></script>
     <script defer data-domain="r3r-mc.com" src="https://plausible.io/js/script.js"></script>
   </body>
 </html>
