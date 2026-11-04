@@ -71,6 +71,39 @@
         </div>
       </section>
 
+      <section class="network" aria-labelledby="networkTitle">
+        <div class="container">
+          <div class="network-head">
+            <div>
+              <p class="eyebrow" data-bind="supply.network.eyebrow"></p>
+              <h2 id="networkTitle" data-bind="supply.network.title"></h2>
+            </div>
+            <p class="network-desc" data-bind="supply.network.desc"></p>
+          </div>
+          <figure class="map-figure">
+            <button
+              class="map-zoom"
+              type="button"
+              data-lightbox-src="/assets/img/scm_network.jpg"
+            >
+              <img
+                data-img="supply.network.image"
+                data-alt="supply.network.alt"
+                alt=""
+                width="1969"
+                height="1126"
+                loading="lazy"
+                decoding="async"
+              />
+            </button>
+            <figcaption class="map-caption">
+              <span data-bind="supply.network.caption"></span>
+              <span class="map-hint" data-bind="supply.network.hint"></span>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
       <section class="section">
         <div class="container">
           <div class="section-head">

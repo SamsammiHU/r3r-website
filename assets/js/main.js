@@ -97,6 +97,74 @@
     });
   }
 
+  function initLightbox() {
+    var triggers = document.querySelectorAll("[data-lightbox-src]");
+    if (!triggers.length) return;
+
+    var box = document.createElement("div");
+    box.className = "lightbox";
+    box.setAttribute("role", "dialog");
+    box.setAttribute("aria-modal", "true");
+    box.setAttribute("aria-label", "Enlarged view");
+    box.innerHTML =
+      '<button class="lightbox-close" type="button" aria-label="Close enlarged view">' +
+      '<svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">' +
+      '<path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" ' +
+      'stroke-width="1.8" stroke-linecap="round" />' +
+      "</svg></button>" +
+      '<img alt="" />';
+    document.body.appendChild(box);
+
+    var img = box.querySelector("img");
+    var closeBtn = box.querySelector(".lightbox-close");
+    var lastFocus = null;
+
+    function open(src, alt) {
+      lastFocus = document.activeElement;
+      img.setAttribute("src", src);
+      img.setAttribute("alt", alt || "");
+      box.classList.add("open");
+      document.body.classList.add("lb-open");
+      document.body.style.overflow = "hidden";
+      closeBtn.focus();
+    }
+
+    function close() {
+      box.classList.remove("open");
+      document.body.classList.remove("lb-open");
+      img.setAttribute("src", "");
+      document.body.style.overflow = "";
+      if (lastFocus && lastFocus.focus) lastFocus.focus();
+    }
+
+    triggers.forEach(function (el) {
+      el.addEventListener("click", function () {
+        var thumb = el.querySelector("img");
+        open(
+          el.getAttribute("data-lightbox-src"),
+          thumb ? thumb.getAttribute("alt") : ""
+        );
+      });
+    });
+
+    closeBtn.addEventListener("click", close);
+
+    box.addEventListener("click", function (e) {
+      if (e.target === box) close();
+    });
+
+    document.addEventListener("keydown", function (e) {
+      if (!box.classList.contains("open")) return;
+      if (e.key === "Escape") {
+        e.preventDefault();
+        close();
+      } else if (e.key === "Tab") {
+        e.preventDefault();
+        closeBtn.focus();
+      }
+    });
+  }
+
   function markActive() {
     var here = location.pathname.replace(/\/+$/, "");
     if (here === "") here = "/index.html";
@@ -195,6 +263,8 @@
   }
 
   document.addEventListener("DOMContentLoaded", function () {
+    initLightbox();
+
     fetch("/assets/data/site.json", { cache: "no-cache" })
       .then(function (res) {
         if (!res.ok) throw new Error("HTTP " + res.status);

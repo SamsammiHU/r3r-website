@@ -10,28 +10,39 @@
     "formRecipient": "business@r3r-mc.com",
     "plausibleDomain": "r3r-mc.com"
   },
-
   "nav": [
-    { "label": "Home", "href": "/index.html" },
-    { "label": "Energy", "href": "/energy.html" },
-    { "label": "Supply Chain", "href": "/supply-chain.html" },
-    { "label": "About", "href": "/about.html" },
-    { "label": "Contact", "href": "/contact.html" }
+    {
+      "label": "Home",
+      "href": "/index.html"
+    },
+    {
+      "label": "Energy",
+      "href": "/energy.html"
+    },
+    {
+      "label": "Supply Chain",
+      "href": "/supply-chain.html"
+    },
+    {
+      "label": "About",
+      "href": "/about.html"
+    },
+    {
+      "label": "Contact",
+      "href": "/contact.html"
+    }
   ],
-
   "cta": {
     "title": "Tell us what you need to deliver.",
     "label": "Discuss Your Project",
     "href": "/contact.html"
   },
-
   "ui": {
     "contact": "Contact",
     "office": "Hong Kong",
     "rights": "All rights reserved.",
     "explore": "Explore"
   },
-
   "home": {
     "hero": {
       "eyebrow": "Hong Kong · Energy & Supply Chain",
@@ -61,12 +72,20 @@
     ],
     "logoLabel": "Selected partners and suppliers",
     "stats": [
-      { "value": "125+", "label": "Integrated Suppliers" },
-      { "value": "Top-Tier", "label": "Manufacturing Ecosystem" },
-      { "value": "Global", "label": "Logistics Networks" }
+      {
+        "value": "125+",
+        "label": "Integrated Suppliers"
+      },
+      {
+        "value": "Top-Tier",
+        "label": "Manufacturing Ecosystem"
+      },
+      {
+        "value": "Global",
+        "label": "Logistics Networks"
+      }
     ]
   },
-
   "energy": {
     "hero": {
       "eyebrow": "Energy Project Coordination",
@@ -163,23 +182,26 @@
       "note": "Delivered in partnership with our authorized strategic suppliers."
     }
   },
-
   "supply": {
     "hero": {
       "eyebrow": "Supply Chain Management",
       "title": "Global Fulfillment & Supply Chain Management",
       "lead": "Beyond energy, R3R brings proven supply chain execution for general merchandise, powered by a global logistics network."
     },
+    "network": {
+      "eyebrow": "Coverage",
+      "title": "Global Logistics Network",
+      "desc": "Access to a global service network across 50 countries, including CDC/RDC facilities for seamless consolidation and distribution.",
+      "image": "/assets/img/scm_network.jpg",
+      "alt": "World map showing the R3R service network across more than 50 countries",
+      "caption": "Service network spanning 50 countries, with consolidated CDC/RDC facilities.",
+      "hint": "Tap the map to enlarge"
+    },
     "capabilitiesHead": {
       "eyebrow": "Capabilities",
       "title": "Execution you can see at every step."
     },
     "capabilities": [
-      {
-        "title": "Global Logistics Network",
-        "desc": "Access to a global service network across 50 countries, including CDC/RDC facilities for seamless consolidation and distribution.",
-        "image": "/assets/img/scm_network.jpg"
-      },
       {
         "title": "Digital Control Tower",
         "desc": "Real-time PO/Shipment tracking and end-to-end visibility via a digital platform. Monitor every step from factory to final delivery.",
@@ -228,7 +250,6 @@
       "desc": "Managed 400+ SKUs with an annual procurement volume of over 7M RMB for a leading Hong Kong retail group."
     }
   },
-
   "about": {
     "hero": {
       "eyebrow": "About R3R",
@@ -241,12 +262,20 @@
       "Our role is coordination and accountability: one point of contact, clear milestones, and delivery that can be verified."
     ],
     "facts": [
-      { "value": "Hong Kong", "label": "Headquarters" },
-      { "value": "2", "label": "Practices — energy & supply chain" },
-      { "value": "125+", "label": "Integrated suppliers" }
+      {
+        "value": "Hong Kong",
+        "label": "Headquarters"
+      },
+      {
+        "value": "2",
+        "label": "Practices — energy & supply chain"
+      },
+      {
+        "value": "125+",
+        "label": "Integrated suppliers"
+      }
     ]
   },
-
   "contact": {
     "hero": {
       "eyebrow": "Contact",
@@ -267,10 +296,26 @@
       "error": "Something went wrong. Please email business@r3r-mc.com directly."
     },
     "categories": [
-      { "label": "Energy Project", "value": "Energy Project", "email": "energy@r3r-mc.com" },
-      { "label": "Supply Chain & Sourcing", "value": "Supply Chain & Sourcing", "email": "sourcing@r3r-mc.com" },
-      { "label": "General Business", "value": "General Business", "email": "business@r3r-mc.com" },
-      { "label": "Contracts & Billing", "value": "Contracts & Billing", "email": "contracts@r3r-mc.com" }
+      {
+        "label": "Energy Project",
+        "value": "Energy Project",
+        "email": "energy@r3r-mc.com"
+      },
+      {
+        "label": "Supply Chain & Sourcing",
+        "value": "Supply Chain & Sourcing",
+        "email": "sourcing@r3r-mc.com"
+      },
+      {
+        "label": "General Business",
+        "value": "General Business",
+        "email": "business@r3r-mc.com"
+      },
+      {
+        "label": "Contracts & Billing",
+        "value": "Contracts & Billing",
+        "email": "contracts@r3r-mc.com"
+      }
     ],
     "emails": [
       {
@@ -301,24 +346,74 @@
     "addressTitle": "Hong Kong office",
     "address": "Unit D18, 3/F, Wong King Industrial Building, No.2-4 Tai Yau Street, San Po Kong, Hong Kong"
   },
-
   "partnerLogos": [
-    { "src": "/assets/img/partner_logo_1.png", "alt": "Partner logo" },
-    { "src": "/assets/img/partner_logo_2.png", "alt": "Partner logo" },
-    { "src": "/assets/img/partner_logo_3.png", "alt": "Partner logo" },
-    { "src": "/assets/img/partner_logo_4.png", "alt": "Partner logo" },
-    { "src": "/assets/img/partner_logo_5.png", "alt": "Partner logo" },
-    { "src": "/assets/img/partner_logo_6.png", "alt": "Partner logo" },
-    { "src": "/assets/img/partner_logo_7.png", "alt": "Partner logo" },
-    { "src": "/assets/img/partner_logo_8.png", "alt": "Partner logo" },
-    { "src": "/assets/img/partner_logo_9.png", "alt": "Partner logo" },
-    { "src": "/assets/img/partner_logo_10.png", "alt": "Partner logo" },
-    { "src": "/assets/img/partner_logo_11.png", "alt": "Partner logo" },
-    { "src": "/assets/img/partner_logo_12.png", "alt": "Partner logo" },
-    { "src": "/assets/img/partner_logo_13.png", "alt": "Partner logo" },
-    { "src": "/assets/img/partner_logo_14.png", "alt": "Partner logo" },
-    { "src": "/assets/img/partner_logo_15.png", "alt": "Partner logo" },
-    { "src": "/assets/img/partner_logo_16.png", "alt": "Partner logo" },
-    { "src": "/assets/img/partner_logo_17.png", "alt": "Partner logo" }
+    {
+      "src": "/assets/img/partner_logo_1.png",
+      "alt": "Partner logo"
+    },
+    {
+      "src": "/assets/img/partner_logo_2.png",
+      "alt": "Partner logo"
+    },
+    {
+      "src": "/assets/img/partner_logo_3.png",
+      "alt": "Partner logo"
+    },
+    {
+      "src": "/assets/img/partner_logo_4.png",
+      "alt": "Partner logo"
+    },
+    {
+      "src": "/assets/img/partner_logo_5.png",
+      "alt": "Partner logo"
+    },
+    {
+      "src": "/assets/img/partner_logo_6.png",
+      "alt": "Partner logo"
+    },
+    {
+      "src": "/assets/img/partner_logo_7.png",
+      "alt": "Partner logo"
+    },
+    {
+      "src": "/assets/img/partner_logo_8.png",
+      "alt": "Partner logo"
+    },
+    {
+      "src": "/assets/img/partner_logo_9.png",
+      "alt": "Partner logo"
+    },
+    {
+      "src": "/assets/img/partner_logo_10.png",
+      "alt": "Partner logo"
+    },
+    {
+      "src": "/assets/img/partner_logo_11.png",
+      "alt": "Partner logo"
+    },
+    {
+      "src": "/assets/img/partner_logo_12.png",
+      "alt": "Partner logo"
+    },
+    {
+      "src": "/assets/img/partner_logo_13.png",
+      "alt": "Partner logo"
+    },
+    {
+      "src": "/assets/img/partner_logo_14.png",
+      "alt": "Partner logo"
+    },
+    {
+      "src": "/assets/img/partner_logo_15.png",
+      "alt": "Partner logo"
+    },
+    {
+      "src": "/assets/img/partner_logo_16.png",
+      "alt": "Partner logo"
+    },
+    {
+      "src": "/assets/img/partner_logo_17.png",
+      "alt": "Partner logo"
+    }
   ]
 }
