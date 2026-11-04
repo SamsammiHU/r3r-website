@@ -191,10 +191,10 @@
     "network": {
       "eyebrow": "Coverage",
       "title": "Global Logistics Network",
-      "desc": "Access to a global service network across 50 countries, including CDC/RDC facilities for seamless consolidation and distribution.",
+      "desc": "Access to a global service network across 40+ countries, including CDC/RDC facilities for seamless consolidation and distribution.",
       "image": "/assets/img/scm_network.jpg",
-      "alt": "World map showing the R3R service network across more than 50 countries",
-      "caption": "Service network spanning 50 countries, with consolidated CDC/RDC facilities.",
+      "alt": "World map showing the R3R service network across more than 40 countries",
+      "caption": "Service network spanning 40+ countries, with consolidated CDC/RDC facilities.",
       "hint": "Tap the map to enlarge"
     },
     "capabilitiesHead": {
