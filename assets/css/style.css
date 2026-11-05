@@ -653,15 +653,6 @@ textarea {
   background: rgba(6, 22, 38, 0.12);
 }
 
-/* a whisper of navy over the plate so the source's light field sits in the band */
-.map-zoom::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background: rgba(6, 22, 38, 0.12);
-}
-
 /* four-sided feather: paints the band colour over the outermost 6-7% so the
    map has no cut edge, while leaving every country label untouched */
 .map-zoom::after {
@@ -695,6 +686,7 @@ textarea {
   background: none;
   cursor: zoom-in;
   line-height: 0;
+  overflow: hidden;
   -webkit-appearance: none;
   appearance: none;
 }
@@ -715,6 +707,92 @@ textarea {
 .map-zoom:focus-visible {
   outline: 2px solid var(--cyan-500);
   outline-offset: 6px;
+}
+
+/* ---------- Radar sweep ----------
+   .map-zoom::before (navy veil) and ::after (four-sided feather) are both
+   spoken for, so the sweep rides its own element. Pure CSS, no script. */
+.map-scan {
+  position: absolute;
+  top: -2%;
+  bottom: -2%;
+  left: 0;
+  width: 46%;
+  pointer-events: none;
+  /* The peak sits at 78%, well inside the element: the trailing 22% is a long
+     fade, so the band dissolves instead of ending on a straight edge. */
+  background: linear-gradient(
+    100deg,
+    rgba(0, 198, 255, 0) 0%,
+    rgba(0, 198, 255, 0.02) 22%,
+    rgba(90, 226, 255, 0.07) 52%,
+    rgba(150, 238, 255, 0.135) 70%,
+    rgba(226, 250, 255, 0.19) 78%,
+    rgba(150, 238, 255, 0.1) 88%,
+    rgba(0, 198, 255, 0.02) 96%,
+    rgba(0, 198, 255, 0) 100%
+  );
+  transform: translate3d(-120%, 0, 0);
+  will-change: transform;
+  animation: mapSweep 9s cubic-bezier(0.42, 0, 0.58, 1) infinite;
+}
+
+@keyframes mapSweep {
+  0% {
+    transform: translate3d(-120%, 0, 0);
+  }
+  56% {
+    transform: translate3d(330%, 0, 0);
+  }
+  100% {
+    transform: translate3d(330%, 0, 0);
+  }
+}
+
+/* ---------- Breathing nodes ----------
+   Coordinates measured from the source bitmap (1969x1126), so each ring sits
+   exactly on the marker already printed in the map image. */
+.map-nodes {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: visible;
+}
+
+.map-node__halo {
+  fill: #4fd8ff;
+  opacity: 0.16;
+}
+
+.map-node__ring {
+  fill: none;
+  stroke: #4fdcff;
+  stroke-width: 2.4;
+  transform-box: fill-box;
+  transform-origin: center;
+  opacity: 0.5;
+  animation: nodePulse 2.4s ease-in-out infinite;
+  animation-delay: var(--d, 0s);
+  will-change: transform, opacity;
+}
+
+.map-node__core {
+  fill: #eafdff;
+  opacity: 0.95;
+}
+
+@keyframes nodePulse {
+  0%,
+  100% {
+    transform: scale(0.95);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1.85);
+    opacity: 0.14;
+  }
 }
 
 .map-caption {
@@ -1240,6 +1318,17 @@ body.lb-open .site-header {
   }
 }
 
+/* phones: the sweep is a full-width gradient composited over a filtered
+   bitmap — the one place it can cost frames. Nodes keep breathing, slower. */
+@media (max-width: 768px) {
+  .map-scan {
+    display: none;
+  }
+  .map-node__ring {
+    animation-duration: 3.6s;
+  }
+}
+
 @media (max-width: 720px) {
   body {
     font-size: 16px;
@@ -1352,5 +1441,13 @@ body.lb-open .site-header {
     scroll-behavior: auto !important;
     transition: none !important;
     animation: none !important;
+  }
+  /* belt and braces: keep the decorative layer fully static */
+  .map-scan {
+    display: none;
+  }
+  .map-node__ring {
+    animation: none !important;
+    opacity: 0;
   }
 }
